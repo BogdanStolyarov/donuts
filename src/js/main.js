@@ -419,3 +419,6 @@
 	}
 })();
 /* form end */
+
+
+console.log(Number(true));
