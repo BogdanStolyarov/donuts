@@ -9,33 +9,52 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:900%7CRoboto:300&display=swap&subset=cyrillic"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
-	<title>Donuts</title>
+
+	<meta name="description" content="Donuts — донатсы в Беларуси от американского повара">
+	<meta name="keywords" content="донатс">
+
+	<meta property="og:title" content="Donuts — донатсы в Беларуси от американского повара" />
+	<meta property="og:description" content="Donuts — донатсы в Беларуси от американского повара" />
+	<meta property="og:image" content="img/section-top/bg.jpg" />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Donuts — донатсы в Беларуси от американского повара</title>
 </head>
 
 <body>
+
+	<!-- header-page -->
 	<header class="header-page">
 		<div class="container header-page__container">
 			<div class="header-page__start">
 				<div class="logo">
-					<img class="logo__img" src="img/common/logo.svg" alt="" width="127" height="21">
+					<img class="logo__img lazy"
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+						data-src="img/common/logo.svg" alt="" width="127" height="21">
 				</div>
 			</div>
 			<div class="header-page__end">
 				<nav class="header-page__nav">
 					<ul class="header-page__ul">
 						<li class="header-page__li">
-							<a class="header-page__link" href="#">
-								<span class="header-page__text">Донатсы</span>
+							<a class="header-page__link" href="#" data-scroll-to="section-catalog">
+								<span class="header-page__text">донатсы</span>
 							</a>
 						</li>
 						<li class="header-page__li">
-							<a class="header-page__link" href="#">
-								<span class="header-page__text">O нас</span>
+							<a class="header-page__link" href="#" data-scroll-to="section-about">
+								<span class="header-page__text">о нас</span>
 							</a>
 						</li>
 						<li class="header-page__li">
-							<a class="header-page__link" href="#">
-								<span class="header-page__text">Контакты</span>
+							<a class="header-page__link" href="#" data-scroll-to="section-contacts">
+								<span class="header-page__text">контакты</span>
 							</a>
 						</li>
 					</ul>
@@ -53,514 +72,355 @@
 			</div>
 		</div>
 	</header>
+	<!-- /.header-page -->
 
 
-
-	<section class="section-top">
+	<!-- section-top -->
+	<section class="section-top lazy" data-src="img/section-top/bg.webp" data-src-replace-webp="img/section-top/bg.jpg">
 		<div class="container section-top__container">
-			<p class="section-top__info">от American pastry chef</p>
-			<h1 class="section-top__title">Лучшие донатсы в Беларуси</h1>
+			<p class="section-top__info">от американского повара</p>
+			<h1 class="section-top__title">Лучшие Донатсы на районе</h1>
 			<div class="section-top__btn">
-				<button class="btn" type="button">Закажи</button>
+				<button class="btn" type="button" data-scroll-to="section-catalog">Выбрать</button>
 			</div>
 		</div>
 	</section>
+	<!-- /.section-top -->
 
-
+	<!-- section-catalog -->
 	<section class="section section-catalog">
 		<div class="container">
 			<header class="section__header">
-				<h2 class="section__title section__title--accent">Меню</h2>
+				<h2 class="page-title page-title--accent">Меню</h2>
 				<nav class="catalog-nav">
 					<ul class="catalog-nav__wrapper">
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn is-active" type="button">все</button>
+							<button class="catalog-nav__btn is-active" type="button" data-filter="all">Все</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">донатсы</button>
+							<button class="catalog-nav__btn" type="button" data-filter="mushrooms">Донатсы</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">берлинеры</button>
+							<button class="catalog-nav__btn" type="button" data-filter="meat">Берлинеры</button>
 						</li>
 						<li class="catalog-nav__item">
-							<button class="catalog-nav__btn" type="button">маффины</button>
+							<button class="catalog-nav__btn" type="button" data-filter="cheese">Маффины</button>
 						</li>
 					</ul>
 				</nav>
 			</header>
-		</div>
-		<div class="catalog">
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
 
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">
-							<details class="accordion">
-								<summary class="accordion__control">
-									<h3 class="accordion__title">Состав:</h3>
-									<span class="accordion__icon"></span>
-								</summary>
-								<p class="product__description">
-									Тесто: сдобное<br>
-									Начинка: черный шоколад;
-									Шоколадная черная глазурь
-									Осколки молочного шоколада</p>
-							</details>
-						</p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+			<div class="catalog">
+				<div class="catalog__item" data-category="mushrooms">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/01.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/01.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Салями</h3>
+							<p class="product__description">Салями, картофель и морковь, огурцы маринованные, моцарелла, цыпленок,
+								ветчина и французский соус </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order"
-								data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">850</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="meat">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/02.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/02.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Хит</h3>
+							<p class="product__description">Картофель и морковь, огурцы
+								маринованные, моцарелла, цыпленок,
+								ветчина и французский соус </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">950</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="cheese">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/03.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/03.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Ветчина-грибы</h3>
+							<p class="product__description">Салями, картофель и морковь, огурцы
+								маринованные, моцарелла, цыпленок,
+								ветчина и французский соус </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">880</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="cheese">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/04.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/04.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Карбонара</h3>
+							<p class="product__description">Салями, картофель и морковь, огурцы маринованные, моцарелла, цыпленок,
+								ветчина и французский соус </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">1250</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="cheese">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/05.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/05.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Фирменная</h3>
+							<p class="product__description">Томатно-сливочный соус, бекон, моцарелла</p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">890</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="meat">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/06.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/06.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Ассорти</h3>
+							<p class="product__description">Картофель моцарелла, цыпленок, грибы,
+								ветчина и французский соус </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">850</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="mushrooms">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/11.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/11.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Л-01</h3>
+							<p class="product__description">Томаты, моцарелла, цыпленок,
+								ветчина и французский соус, секректный ингредиент </p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">920</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="mushrooms">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/12.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/12.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Три сыра</h3>
+							<p class="product__description">Чеддер, камамбер, эдам</p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">990</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
+							</div>
+						</footer>
+					</div>
 				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
+				<div class="catalog__item" data-category="mushrooms">
+					<div class="product catalog__product">
+						<picture>
+							<source type="image/webp"
+								srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-srcset="img/section-catalog/13.webp">
+							<img class="product__img lazy"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+								data-src="img/section-catalog/13.png" alt="">
+						</picture>
+						<div class="product__content">
+							<h3 class="product__title">Мясная</h3>
+							<p class="product__description">Курица, говядина, сливочный соус, салями,
+								огурцы маринованные, томаты, грибы,
+								бекон</p>
 						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+						<footer class="product__footer">
+							<div class="product__sizes">
+								<button data-product-size-price="950" class="product__size is-active" type="button">35см</button>
+								<button data-product-size-price="850" class="product__size" type="button">30см</button>
+								<button data-product-size-price="650" class="product__size" type="button">25см</button>
 							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
+							<div class="product__bottom">
+								<div class="product__price">
+									<span class="product__price-value">950</span>
+									<span class="product__currency">&#8381;</span>
+								</div>
+								<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
 							</div>
-							<button class="btn product__btn" type="button">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
+						</footer>
 					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
-				</div>
-
-			</div>
-			<div class="catalog__item">
-				<div class="product catalog__product">
-					<img src="../src/img/section-catalog/01.jpg" alt="" class="product__img">
-					<div class="product__content">
-						<h3 class="product__title">Донатс «Шоколадный»</h3>
-						<p class="product__description">Состав:<br>
-							Тесто: сдобное<br>
-							Начинка: черный шоколад<br>
-							Шоколадная черная глазурь<br>
-							Осколки молочного шоколада<br> </p>
-					</div>
-					<footer class="product__footer">
-						<div class="product__sizes">
-							<button class="product__size is-active" type="button">2шт</button>
-							<button class="product__size" type="button">4шт</button>
-							<button class="product__size" type="button">8шт</button>
-						</div>
-						<div class="product__bottom">
-							<div class="product__price">
-								<span class="product__price-value">5р 00 коп</span>
-							</div>
-							<button class="btn product__btn" type="button" data-popup="popup-order">заказать</button>
-						</div>
-					</footer>
 				</div>
 			</div>
-
 		</div>
 	</section>
+	<!-- /.section-catalog -->
 
+	<!-- section-about -->
 	<section class="section section-about">
-		<img src="img/with-us.jpg" alt="" class="section-about__img">
+		<picture>
+			<source type="image/webp"
+				srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+				data-srcset="img/section-about/bg.webp">
+			<img class="section-about__img lazy"
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+				data-src="img/section-about/bg.jpg" alt="">
+		</picture>
 		<div class="container section-about__container">
 			<div class="section-about__content">
-				<h2 class="section__title section-about__title">О нас</h2>
-				<p class="section-about__text">В свое время для нас стало открытием, что пончики занимают не последнее место в
-					меню
-					людей дальнего и ближнего зарубежья.<br><br>
-
-					Мы пробовали пончики в разных странах и всегда возвращаясь домой пытались найти нечто подобное у нас. Раньше в
-					нашей стране нельзя было найти действительно качественный и натуральный пончик. Перепробовав множество товаров
-					с
-					одноименным названием, мы не нашли продукта, который бы хотелось съесть и тем более дать своим детям. Конечно
-					же
-					они привлекают взгляды, но если взглянуть глубже и прочитать состав, аппетит пропадает...<br><br>
-
-					Теперь мы готовы представить уникальный в своем роде продукт вашему вниманию. Благодаря сбалансированности
-					только
-					натуральных продуктов мы получили пончики DonutS. С гордостью можем заявить, что получили вкусный и
-					натуральный
-					пончик, который рекомендуем даже своим детям.</p>
+				<h2 class="page-title section-about__title">О нас</h2>
+				<p class="section-about__text">Доставим вам горячую пиццу менее чем за час или пицца бесплатно.
+					Мы готовим пиццу только из свежих продуктов. Каждый день мы покупаем свежие овощи, грибы и мясо.</p>
 			</div>
 		</div>
 	</section>
+	<!-- /.section-about -->
 
+	<!-- section-contacts -->
 	<section class="section section-contacts">
 		<div class="container section-contacts__container">
+			<div class="section-contacts__img lazy" data-src="img/section-contacts/tomatoes.webp"
+				data-src-replace-webp="img/section-contacts/tomatoes.jpg"></div>
 			<header class="section__header">
 				<h2 class="page-title sectoin-contacts__title">Контакты</h2>
 			</header>
@@ -571,12 +431,12 @@
 				<div class="contacts__end">
 					<div class="contacts__item">
 						<h3 class="contacts__title">Адрес</h3>
-						<p class="contacts__text">г. Минск, ул.Красная, 8</p>
+						<p class="contacts__text">г. Москва, Преображенская площадь, 8</p>
 					</div>
 					<div class="contacts__item">
 						<h3 class="contacts__title">Телефон</h3>
 						<p class="contacts__text">
-							<a class="contacts__phone" href="tel:+375298571691">+375 (29) 857-16-91</a>
+							<a class="contacts__phone" href="tel:+79117112123">+375 (29) 857-16-91</a>
 						</p>
 					</div>
 					<div class="contacts__item">
@@ -626,12 +486,15 @@
 			</div>
 		</div>
 	</section>
+	<!-- /.section-contacts -->
 
+	<!-- footer-page -->
 	<footer class="footer-page">
 		<div class="container">
-			<div class="footer-page__text">DonutS 2021</div>
+			<div class="footer-page__text">Donuts, 2021</div>
 		</div>
 	</footer>
+	<!-- /.footer-page -->
 
 
 	<!-- popup-menu -->
@@ -654,7 +517,7 @@
 						</ul>
 					</nav>
 					<div class="phone popup__phone">
-						<a class="phone__item phone__item--accent" href="tel:+79999999999">+7 (999) 999-99-99</a>
+						<a class="phone__item phone__item--accent" href="tel:+375298571691">+375 (29)857-16-91</a>
 					</div>
 					<ul class="socials">
 						<li class="socials__item">
@@ -709,14 +572,16 @@
 				<div class="popup__content">
 					<button class="btn-close popup__btn-close popup-close"></button>
 					<h2 class="page-title popup__title">Заполните форму</h2>
-					<p class="popup__subtitle popup__subtitle--order">Мы привезем вам вкусные донатсы в течении 3 часов</p>
+					<p class="popup__subtitle popup__subtitle--order">Мы привезем вам горячую пиццу за 50 минут</p>
 					<div class="order">
-						<img class="order__img" src="img/01.jpg" alt="">
+						<img class="order__img"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+							alt="">
 						<h3 class="order__title">
-							<span class="order-product-title">Шоколадный</span>
-							<span class="order-product-price">12 руб 00 коп</span>
+							<span class="order-product-title"></span>
+							<span class="order-product-price"></span> &#8381;
 						</h3>
-						<p class="order__size">8 шт</p>
+						<p class="order__size"></p>
 						<form class="form form-send">
 							<input class="order-info-title" type="hidden" name="пицца">
 							<input class="order-info-price" type="hidden" name="цена">
@@ -744,7 +609,7 @@
 				<div class="popup__content">
 					<button class="btn-close popup__btn-close popup-close"></button>
 					<h2 class="page-title popup__title">Успешно отправлено</h2>
-					<p class="popup__subtitle">Мы уже начали готовить ваши донатсы</p>
+					<p class="popup__subtitle">Мы уже начали готовить вашу пиццу</p>
 				</div>
 			</div>
 		</div>
@@ -759,7 +624,7 @@
 					<button class="btn-close popup__btn-close popup-close"></button>
 					<h2 class="page-title popup__title">Произошла ошибка</h2>
 					<p class="popup__subtitle">Пожалуйста, сделайте заказ по номеру <a class="popup__link"
-							href="+375298571691">+375(29)857-16-91</a></p>
+							href="+375298571691">+375298571691</a></p>
 				</div>
 			</div>
 		</div>
@@ -770,7 +635,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
 
 	<script src="js/main.js"></script>
-
 </body>
 
 </html>
