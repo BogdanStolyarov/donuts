@@ -748,7 +748,7 @@ img {
 }
 
 .product__description {
-	margin: 0;
+	text-align: center;
 	color: #9f9f9f;
 }
 
